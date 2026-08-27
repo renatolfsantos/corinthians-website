@@ -1,0 +1,178 @@
+.elenco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: #111111;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+.elenco h2{
+    margin: 0;
+    color: #f5f5f5;
+    font-family: 'Antonio', sans-serif;
+    font-size: clamp(4.8rem, 7.8vw, 8.2rem);
+    font-weight: 200;
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    justify-content: center;
+}
+
+.elenco h3{
+    margin: 0;
+    color: #f5f5f5;
+    font-family: 'Antonio', sans-serif;
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 0.9;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.players-grid {
+  content-visibility: auto;
+  contain-intrinsic-size: 900px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  gap: 32px;
+}
+
+.player-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 440px;
+
+  position: relative;
+  overflow: hidden;
+  width: 320px;
+  height: 440px;
+  flex: 0 0 320px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.player-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.15) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.player-card-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
+
+.player-card-number {
+  position: absolute;
+  text-shadow:
+    1px 1px 0 black,
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black;
+  top: 20px;
+  right: 24px;
+  z-index: 3;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.player-card-photo-wrapper {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 270px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.player-card-photo {
+  width: 275px;
+  height: 275px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 100%;
+  padding: 20px 20px 20px;
+}
+
+.player-card:hover .player-card-photo {
+  transform: scale(1.05);
+}
+
+.player-card-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 145px;
+  box-sizing: border-box;
+  padding: 45px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 3;
+}
+
+.player-card-position {
+  display: block;
+  height: 24px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 24px;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.player-card-name {
+  height: 40px;
+  margin: 4px 0 0;
+  font-size: 1.55rem;
+  line-height: 40px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-card-age {
+  display: block;
+  height: 24px;
+  margin: 4px 0 0;
+  font-size: 1rem;
+  line-height: 24px;
+  opacity: 0.6;
+}

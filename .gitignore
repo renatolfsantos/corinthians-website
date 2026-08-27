@@ -1,0 +1,119 @@
+# ==========================================
+# FRONTEND - Node / React / Vite
+# ==========================================
+
+# Dependências
+**/node_modules/
+
+# Build
+**/dist/
+**/build/
+**/.vite/
+
+# Environment / Secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Logs
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+
+# Coverage
+**/coverage/
+
+# ==========================================
+# BACKEND - .NET / ASP.NET Core
+# ==========================================
+
+# Build
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ==========================================
+# .NET / NuGet
+# ==========================================
+
+**/packages/
+*.nupkg
+*.snupkg
+
+# ==========================================
+# DATABASES / LOCAL DATA
+# ==========================================
+
+# SQLite
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.sqlite
+**/*.sqlite3
+
+# Local database files
+**/database/
+**/data/
+
+# ==========================================
+# SECRETS
+# ==========================================
+
+**/secrets.json
+**/secrets.*.json
+
+# User secrets
+**/secrets/
+**/appsettings.Local.json
+**/appsettings.*.Local.json
+
+# ==========================================
+# TEST / COVERAGE
+# ==========================================
+
+**/TestResults/
+**/test-results/
+**/coverage/
+
+# ==========================================
+# OS
+# ==========================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==========================================
+# TEMPORARY FILES
+# ==========================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+
+# ==========================================
+# GENERATED FILES
+# ==========================================
+
+*.cache
+*.log

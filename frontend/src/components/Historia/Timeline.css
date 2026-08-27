@@ -1,0 +1,449 @@
+.history {
+  position: relative;
+
+  min-height: 100svh;
+  height: 100svh;
+
+  overflow: hidden;
+
+  padding: 80px 8vw;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(90, 90, 90, 0.3),
+      transparent 45%
+    ),
+    #020302;
+
+  color: #f5f5f5;
+}
+
+.history-header {
+  position: absolute;
+
+  top: clamp(100px, 20vh, 200px);   
+  left: 8vw;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.history-header span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 11px;
+  letter-spacing: 0.25em;
+
+  opacity: 0.5;
+}
+
+.history-header h2 {
+  margin: 0;
+
+  font-size: clamp(20px,4vw, 65px);
+
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+
+  font-weight: 300;
+}
+
+.history-header strong {
+  font-weight: 700;
+}
+
+.history-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  transform: translateX(-50%);
+
+  z-index: 1;
+}
+
+.history-line-progress {
+  width: 100%;
+  height: 100%;
+
+  background: #ffffff;
+
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.history-events {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+}
+
+.history-event {
+  position: absolute;
+
+  inset: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: clamp(40px, 8vw, 120px);
+
+  padding-top: clamp(40px, 10vh, 100px);
+}
+
+.history-event-left {
+  text-align: right;
+}
+
+.history-event-right {
+  text-align: left;
+}
+
+.history-year {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 3;
+
+  transform: translate(-50%, -50%);
+
+  font-size: clamp(28px, 4vw, 64px);
+
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+
+  color: #ffffff;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+}
+
+.history-content {
+  width: min(100%, 440px);
+}
+
+.history-event-left .history-content {
+  grid-column: 1;
+
+  justify-self: end;
+
+  padding-right: clamp(30px, 5vw, 60px);
+
+  margin-right: clamp(20px, 3vw, 50px);
+}
+
+.history-event-right .history-content {
+  grid-column: 2;
+
+  justify-self: start;
+
+  padding-left: clamp(30px, 5vw, 60px);
+
+  margin-left: clamp(20px, 3vw, 50px);
+}
+
+
+.history-content h3 {
+  margin: 0 0 20px;
+
+  font-size: clamp(28px, 3vw, 52px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
+
+.history-content p {
+  margin: 0;
+
+  max-width: 400px;
+
+  font-size: clamp(14px, 1.1vw, 15px);
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.history-image-wrapper {
+  position: absolute;
+
+  width: clamp(260px, 30vw, 500px);
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #111;
+
+  z-index: 2;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.history-event-left .history-image-wrapper {
+  left: 75%;
+  right: auto;
+
+  transform: translate(-50%, -50%);
+}
+
+.history-event-right .history-image-wrapper {
+  left: 25%;
+  right: auto;
+
+  transform: translate(-50%, -50%);
+}
+
+.history-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+
+  filter:
+    grayscale(100%)
+    contrast(1.1);
+
+  transition:
+    filter 0.4s ease,
+    transform 0.6s ease;
+}
+
+.history-event:hover .history-image {
+  transform: scale(1.03);
+}
+
+
+@media (max-width: 1100px) {
+  .history {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .history-header {
+    left: 5vw;
+  }
+
+  .history-event {
+    gap: 30px;
+  }
+
+  .history-event-left .history-content {
+    padding-right: 30px;
+    margin-right: 50px;
+  }
+
+  .history-event-right .history-content {
+    padding-left: 30px;
+    margin-left: 50px;
+  }
+
+  .history-image-wrapper {
+    width: clamp(240px, 30vw, 360px);
+  }
+
+  .history-event-left .history-image-wrapper {
+    right: 5vw;
+  }
+
+  .history-event-right .history-image-wrapper {
+    left: 5vw;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .history {
+    min-height: 100svh;
+    height: 100svh;
+
+    padding: 40px 24px;
+  }
+
+  .history-header {
+    top: 40px;
+
+    left: 50px;
+  }
+
+  .history-header span {
+    margin-bottom: 12px;
+
+    font-size: 9px;
+  }
+
+  .history-header h2 {
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+
+  .history-line {
+    left: 24px;
+  }
+
+
+  .history-event {
+    display: block;
+
+    padding: 0;
+    padding-left: 50px;
+  }
+
+
+  .history-year {
+    left: 24px;
+
+    top: 48%;
+
+    transform: translate(-50%, -50%);
+
+    font-size: clamp(22px, 7vw, 32px);
+  }
+
+
+  .history-content,
+  .history-event-left .history-content,
+  .history-event-right .history-content {
+    position: absolute;
+
+    left: 50px;
+    right: 20px;
+
+    top: 31%;
+
+    width: auto;
+    max-width: none;
+
+    padding: 0;
+    margin: 0;
+
+    text-align: left;
+  }
+
+
+  .history-content h3 {
+    margin-bottom: 14px;
+
+    font-size: clamp(26px, 8vw, 38px);
+  }
+
+  .history-content p {
+    max-width: 90%;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+  .history-image-wrapper,
+  .history-event-left .history-image-wrapper,
+  .history-event-right .history-image-wrapper {
+    left: 50%;
+    right: auto;
+
+    bottom: 6%;
+    top: auto;
+
+    width: calc(100% - 70px);
+
+    transform: translateX(-50%);
+
+    border-radius: 8px;
+  }
+
+  .history-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .history {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .history-line {
+    left: 18px;
+  }
+
+  .history-header {
+    left: 42px;
+    top: 35px;
+  }
+
+  .history-event {
+    padding-left: 42px;
+  }
+
+  .history-year {
+    left: 18px;
+
+    font-size: 22px;
+  }
+
+  .history-content,
+  .history-event-left .history-content,
+  .history-event-right .history-content {
+    left: 42px;
+    right: 14px;
+
+    top: 30%;
+  }
+
+  .history-content h3 {
+    font-size: 27px;
+  }
+
+  .history-content p {
+    max-width: 95%;
+
+    font-size: 12px;
+  }
+
+  .history-image-wrapper,
+  .history-event-left .history-image-wrapper,
+  .history-event-right .history-image-wrapper {
+    left: 50%;
+
+    bottom: 5%;
+
+    width: calc(100% - 56px);
+
+    transform: translateX(-50%);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .history-image {
+    transition: none;
+  }
+}}

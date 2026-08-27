@@ -1,10 +1,11 @@
 {
   "services": {
-    "web": {
+    "frontend": {
       "root": "frontend/"
     },
-    "api": {
+    "backend": {
       "root": "backend/",
+      "runtime": "container",
       "entrypoint": "Dockerfile.vercel"
     }
   },
@@ -12,13 +13,13 @@
     {
       "source": "/api/(.*)",
       "destination": {
-        "service": "api"
+        "service": "backend"
       }
     },
     {
       "source": "/(.*)",
       "destination": {
-        "service": "web"
+        "service": "frontend"
       }
     }
   ]

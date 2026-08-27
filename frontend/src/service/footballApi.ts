@@ -1,3 +1,5 @@
+const API_URL = import.meta.env.VITE_API_URL
+
 export interface Match {
   home: string
   away: string
@@ -21,7 +23,7 @@ export interface Player {
 
 export async function getNextMatch(): Promise<Match | null> {
   const response = await fetch(
-    'http://localhost:5292/api/matches/next'
+    `${API_URL}/api/matches/next`
   )
 
   if (!response.ok) {
@@ -33,7 +35,7 @@ export async function getNextMatch(): Promise<Match | null> {
 
 export async function getPlayers(): Promise<Player[]> {
   const response = await fetch(
-    'http://localhost:5292/api/players'
+    `${API_URL}/api/players`
   )
 
   if (!response.ok) {

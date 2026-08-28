@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "name": "Hugo Souza",
+    "age": 27,
+    "number": 1,
+    "position": "Goalkeeper",
+    "photo": "/images/hs.webp"
+  },
+  {
+    "id": 2,
+    "name": "Matheuzinho",
+    "age": 25,
+    "number": 2,
+    "position": "Right Back",
+    "photo": "/images/m.webp"
+  },
+  {
+    "id": 3,
+    "name": "Gabriel Paulista",
+    "age": 35,
+    "number": 3,
+    "position": "Defender",
+    "photo": "/images/gp.webp"
+  },
+  {
+    "id": 4,
+    "name": "João Pedro",
+    "age": 22,
+    "number": 4,
+    "position": "Defender",
+    "photo": "/images/jp.webp"
+  },
+  {
+    "id": 5,
+    "name": "André Ramalho",
+    "age": 34,
+    "number": 5,
+    "position": "Defender",
+    "photo": "/images/ar.webp"
+  },
+  {
+    "id": 6,
+    "name": "Kauê",
+    "age": 22,
+    "number": 51,
+    "position": "Goalkeeper",
+    "photo": "/images/k.webp"
+  },
+  {
+    "id": 7,
+    "name": "Breno Bidon",
+    "age": 21,
+    "number": 7,
+    "position": "Midfielder",
+    "photo": "/images/bb.webp"
+  },
+  {
+    "id": 8,
+    "name": "Rodrigo Garro",
+    "age": 28,
+    "number": 8,
+    "position": "Midfielder",
+    "photo": "/images/rg.webp"
+  },
+  {
+    "id": 9,
+    "name": "Yuri Alberto",
+    "age": 25,
+    "number": 9,
+    "position": "Attacker",
+    "photo": "/images/ya.webp"
+  },
+  {
+    "id": 10,
+    "name": "Memphis Depay",
+    "age": 32,
+    "number": 10,
+    "position": "Attacker",
+    "photo": "/images/me.webp"
+  },
+  {
+    "id": 11,
+    "name": "Vitinho",
+    "age": 32,
+    "number": 11,
+    "position": "Attacker",
+    "photo": "/images/v.webp"
+  },
+  {
+    "id": 13,
+    "name": "Gustavo Henrique",
+    "age": 33,
+    "number": 13,
+    "position": "Defender",
+    "photo": "/images/gh.webp"
+  },
+  {
+    "id": 14,
+    "name": "Raniele",
+    "age": 29,
+    "number": 14,
+    "position": "Midfielder",
+    "photo": "/images/r.webp"
+  },
+  {
+    "id": 18,
+    "name": "Pedro Raul",
+    "age": 29,
+    "number": 18,
+    "position": "Attacker",
+    "photo": "/images/pr.webp"
+  },
+  {
+    "id": 19,
+    "name": "André Carrillo",
+    "age": 35,
+    "number": 19,
+    "position": "Midfielder",
+    "photo": "/images/ac.webp"
+  },
+  {
+    "id": 20,
+    "name": "Pedro Milans",
+    "age": 24,
+    "number": 20,
+    "position": "Right Back",
+    "photo": "/images/pm.webp"
+  },
+  {
+    "id": 21,
+    "name": "Matheus Bidu",
+    "age": 27,
+    "number": 21,
+    "position": "Left Back",
+    "photo": "/images/mb.webp"
+  },
+  {
+    "id": 23,
+    "name": "Matheus Pereira",
+    "age": 28,
+    "number": 23,
+    "position": "Midfielder",
+    "photo": "/images/mp.webp"
+  },
+  {
+    "id": 26,
+    "name": "Fabrizio Angileri",
+    "age": 32,
+    "number": 26,
+    "position": "Left Back",
+    "photo": "/images/fa.webp"
+  },
+  {
+    "id": 29,
+    "name": "Allan",
+    "age": 29,
+    "number": 29,
+    "position": "Midfielder",
+    "photo": "/images/a.webp"
+  },
+  {
+    "id": 31,
+    "name": "Kayke",
+    "age": 22,
+    "number": 31,
+    "position": "Attacker",
+    "photo": "/images/ka.webp"
+  },
+  {
+    "id": 35,
+    "name": "Charles",
+    "age": 30,
+    "number": 35,
+    "position": "Midfielder",
+    "photo": "/images/c.webp"
+  },
+  {
+    "id": 37,
+    "name": "Kaio César",
+    "age": 22,
+    "number": 37,
+    "position": "Attacker",
+    "photo": "/images/kc.webp"
+  },
+  {
+    "id": 40,
+    "name": "Felipe Longo",
+    "age": 21,
+    "number": 40,
+    "position": "Goalkeeper",
+    "photo": "/images/fl.webp"
+  },
+  {
+    "id": 49,
+    "name": "André Luiz",
+    "age": 24,
+    "number": 49,
+    "position": "Midfielder",
+    "photo": "/images/an.webp"
+  },
+  {
+    "id": 52,
+    "name": "Zakaria Labyad",
+    "age": 33,
+    "number": 52,
+    "position": "Midfielder",
+    "photo": "/images/lg.webp"
+  },
+  {
+    "id": 56,
+    "name": "Gui Negão",
+    "age": 19,
+    "number": 56,
+    "position": "Attacker",
+    "photo": "/images/gn.webp"
+  },
+  {
+    "id": 61,
+    "name": "Dieguinho",
+    "age": 18,
+    "number": 61,
+    "position": "Attacker",
+    "photo": "/images/d.webp"
+  },
+  {
+    "id": 63,
+    "name": "Alex Santana",
+    "age": 30,
+    "number": 63,
+    "position": "Midfielder",
+    "photo": "/images/as.webp"
+  },
+  {
+    "id": 67,
+    "name": "Léo Mana",
+    "age": 22,
+    "number": null,
+    "position": "Right Back",
+    "photo": "/images/l.webp"
+  },
+  {
+    "id": 77,
+    "name": "Jesse Lingard",
+    "age": 33,
+    "number": 77,
+    "position": "Midfielder",
+    "photo": "/images/li.webp"
+  },
+  {
+    "id": 80,
+    "name": "Hugo Farias",
+    "age": 24,
+    "number": null,
+    "position": "Left Back",
+    "photo": "/images/h.webp"
+  }
+]

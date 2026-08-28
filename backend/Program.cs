@@ -33,7 +33,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseCors("ReactApp");
+app.UseCors("Frontend");
 
 app.UseAuthorization();
 

@@ -177,9 +177,11 @@
   font-family: 'Space Mono', monospace;
   font-size: clamp(0.92rem, 1.28vw, 1.7rem);
   line-height: 1.42;
+  min-height: 1.42em;
   letter-spacing: 0.08em;
   font-weight: 400;
   text-transform: none;
+  white-space: nowrap;
 }
 
 .hero-cta {
@@ -201,7 +203,6 @@
 .hero-cta span {
   display: inline-block;
 }
-
 .next-match {
   position: relative;
   min-height: 100svh;

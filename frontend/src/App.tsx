@@ -1,6 +1,12 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 
 import './App.css'
 
@@ -8,6 +14,7 @@ import {
   Hero,
   NextMatch,
 } from './components'
+
 import Elenco from './components/Elenco/Elenco'
 import Header from './components/Header/Header'
 import Historia from './components/Historia/Timeline'
@@ -31,6 +38,9 @@ function App() {
   const [videoLoaded, setVideoLoaded] =
     useState(false)
 
+  const [startTyping, setStartTyping] =
+    useState(false)
+
   const appReady =
     matchLoaded && videoLoaded
 
@@ -49,7 +59,7 @@ function App() {
 
       const intro =
         document.querySelectorAll(
-          '.hero-copy-line, .hero-title-line, .hero-cta'
+          '.hero-title-line, .hero-cta'
         )
 
       gsap.set(logo, {
@@ -102,6 +112,7 @@ function App() {
           },
           '+=0.3'
         )
+
         .to(
           'header',
           {
@@ -122,16 +133,9 @@ function App() {
           },
           '+=0.15'
         )
-        .to(
-          '.hero-copy-line',
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: reducedMotion ? 0.3 : 0.8,
-            stagger: 0.1,
-          },
-          '+=0.05'
-        )
+        .call(() => {
+          setStartTyping(true)
+        })
         .to(
           '.hero-cta',
           {
@@ -145,7 +149,7 @@ function App() {
 
     return () => context.revert()
   }, [appReady])
-
+  
   useEffect(() => {
     if (!matchLoaded) return
 
@@ -180,6 +184,7 @@ function App() {
           clipPath: 'inset(0 0 0% 0)',
           duration: 1,
           ease: 'power3.out',
+
           scrollTrigger: {
             trigger: '.next-match',
             start: 'top 72%',
@@ -204,6 +209,7 @@ function App() {
           rotateX: 0,
           duration: 1.25,
           ease: 'power4.out',
+
           scrollTrigger: {
             trigger: '.next-match',
             start: 'top 68%',
@@ -225,6 +231,7 @@ function App() {
           duration: 0.7,
           stagger: 0.12,
           ease: 'power3.out',
+
           scrollTrigger: {
             trigger: '.match-glass',
             start: 'top 58%',
@@ -243,6 +250,7 @@ function App() {
           x: '120%',
           duration: 1.8,
           ease: 'power2.inOut',
+
           scrollTrigger: {
             trigger: '.match-glass',
             start: 'top 65%',
@@ -262,7 +270,7 @@ function App() {
     <div
       className="app-shell"
       ref={appRef}
-    > 
+    >
       <Preloader />
 
       <div className="experience">
@@ -274,15 +282,19 @@ function App() {
         >
           <Suspense fallback={null}>
             <ShaderBackground
-              onLoaded={() => setVideoLoaded(true)}
+              onLoaded={() =>
+                setVideoLoaded(true)
+              }
             />
           </Suspense>
         </div>
 
-        <Hero />
+        <Hero
+          startTyping={startTyping}
+        />
       </div>
 
-      <Historia></Historia>
+      <Historia />
 
       <Elenco />
 
@@ -296,3 +308,4 @@ function App() {
 }
 
 export default App
+

@@ -11,12 +11,5 @@
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.11" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<Content Include="Data/players.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
-		</Content>
-	</ItemGroup>
-
 
 </Project>

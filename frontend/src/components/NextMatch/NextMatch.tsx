@@ -5,6 +5,8 @@ import {
   type Match,
 } from '../../service/footballApi'
 
+import './NextMatch.css'
+
 interface NextMatchProps {
   onLoaded?: () => void
 }

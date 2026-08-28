@@ -1,0 +1,117 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(200px, 0.8fr);
+  align-items: center;
+  height: calc(100% - 5.6rem);
+  min-height: 0;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding-left: 0.5rem;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 0 1.55rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(5.8rem, 7.1vw, 9.7rem);
+  line-height: 0.78;
+  letter-spacing: 0.005em;
+  font-weight: 400;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
+.hero-title-line {
+  display: inline-block;
+  padding-top: 7px;
+  clip-path: inset(0 0 0 0);
+}
+
+.hero-copy-line {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(0.92rem, 1.28vw, 1.7rem);
+  line-height: 1.42;
+  min-height: 1.42em;
+  letter-spacing: 0.08em;
+  font-weight: 400;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.hero-cta {
+  align-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 0.8rem;
+  font-family: 'Antonio', sans-serif;
+  font-size: clamp(3rem, 4.2vw, 5.6rem);
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  font-weight: 100;
+  color: #f4f4f4;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.hero-cta span {
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .interface-layer {
+    padding: 2rem 1.5rem 2.2rem;
+  }
+
+  .video-start {
+    top: 2rem;
+    right: 1.5rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: end;
+    gap: 2rem;
+    height: calc(100% - 5rem);
+    min-height: 0;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding-left: 0.2rem;
+  }
+
+  .hero-title {
+    margin-bottom: 1.4rem;
+    font-size: clamp(4.7rem, 20vw, 8rem);
+  }
+
+  .hero-copy-line {
+    font-size: clamp(0.78rem, 3.3vw, 1.15rem);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-cta {
+    justify-content: flex-start;
+    text-align: left;
+    padding-bottom: 0;
+    font-size: clamp(2.7rem, 13vw, 4.8rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-logo,
+  .hero-title-line,
+  .hero-copy-line,
+  .hero-cta {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+

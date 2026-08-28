@@ -1,6 +1,8 @@
 import { gsap } from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
 
+import './Hero.css'
+
 interface HeroProps {
   startTyping: boolean
 }

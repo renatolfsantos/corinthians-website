@@ -1,4 +1,5 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
+
 WORKDIR /src
 
 COPY ["CorinthiansApi.csproj", "./"]
@@ -13,9 +14,13 @@ RUN dotnet publish "CorinthiansApi.csproj" \
     --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
+
 WORKDIR /app
 
 COPY --from=build /app/publish .
+
+# Garante que o JSON esteja disponível no container
+COPY --from=build /src/Data ./Data
 
 ENV ASPNETCORE_URLS=http://+:80
 

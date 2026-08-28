@@ -12,13 +12,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Update="Data\players.json">
+		<Content Include="Data/players.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-
-		<None Update="images\**\*">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
 	</ItemGroup>
+
 
 </Project>

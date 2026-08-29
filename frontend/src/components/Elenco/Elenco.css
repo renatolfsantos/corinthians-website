@@ -176,3 +176,16 @@
   line-height: 24px;
   opacity: 0.6;
 }
+
+@media (max-width: 850px) {
+  .players-grid {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .player-card {
+    width: calc(50% - 10px);
+    flex: 0 0 calc(50% - 10px);
+    height: 300px;
+  }
+}

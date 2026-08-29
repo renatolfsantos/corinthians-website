@@ -188,4 +188,19 @@
     flex: 0 0 calc(50% - 10px);
     height: 300px;
   }
+
+  .player-card-name {
+    font-size: 1rem;
+    white-space: wrap;
+    height: auto;
+    line-height: 20px;
+  }
+
+  .player-card-number{
+    font-size: 2rem;
+  }
+
+  .player-card-photo-wrapper{
+    padding-bottom: 25px;
+  }
 }

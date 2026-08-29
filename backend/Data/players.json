@@ -254,5 +254,13 @@
     "number": null,
     "position": "Left Back",
     "photo": "/images/h.webp"
+  },
+  {
+    "id": 999,
+    "name": "Fernando Diniz",
+    "age": 52,
+    "number": null,
+    "position": "Técnico",
+    "photo": "/images/fd.webp"
   }
 ]

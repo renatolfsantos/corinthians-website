@@ -171,12 +171,12 @@
 }
 
 .history-event-left .history-image-wrapper {
-  left: 70%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
 .history-event-right .history-image-wrapper {
-  left: 30%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 

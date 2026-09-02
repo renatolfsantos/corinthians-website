@@ -45,7 +45,7 @@ A proposta do projeto é unir desenvolvimento frontend, animação, efeitos visu
 * Transições visuais e efeitos aplicados às imagens durante a navegação
 * Seção com informações sobre o elenco
 * Exibição de informações sobre próximas partidas
-* Integração entre frontend e backend באמצעות API REST
+* Integração entre frontend e backend por meio de API REST
 * Layout responsivo
 * Carregamento otimizado de imagens e outros recursos visuais
 

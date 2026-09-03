@@ -21,7 +21,7 @@
     "age": 22,
     "number": 51,
     "position": "Goalkeeper",
-    "photo": "/images/kc.webp"
+    "photo": "/images/k.webp"
   },
   {
     "id": 5,
@@ -221,7 +221,7 @@
     "age": 22,
     "number": 31,
     "position": "Attacker",
-    "photo": "/images/k.webp"
+    "photo": "/images/ka.webp"
   },
   {
     "id": 52,

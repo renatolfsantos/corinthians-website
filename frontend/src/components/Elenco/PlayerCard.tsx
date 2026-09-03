@@ -10,6 +10,10 @@ function formatPosition(position: string) {
       return 'Goleiro'
     case 'Defender':
       return 'Defensor'
+    case 'Right Back':
+      return 'Lateral Dir.'
+    case 'Left Back':
+      return 'Lateral Esq.'
     case 'Midfielder':
       return 'Meia'
     case 'Attacker':

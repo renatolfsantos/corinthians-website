@@ -33,6 +33,7 @@ export default function Elenco() {
 
 const goalkeepers: Player[] = []
 const defenders: Player[] = []
+const fullbacks: Player[] = []
 const midfielders: Player[] = []
 const attackers: Player[] = []
 const tecnico: Player[] = []
@@ -44,6 +45,10 @@ players.forEach(player => {
       break
     case 'Defender':
       defenders.push(player)
+      break
+    case 'Right Back':
+    case 'Left Back':  
+      fullbacks.push(player)
       break
     case 'Midfielder':
       midfielders.push(player)
@@ -88,6 +93,17 @@ players.forEach(player => {
 
         <div className="players-grid">
           {defenders.map(player => (
+            <PlayerCard
+              key={player.id}
+              player={player}
+            />
+          ))}
+        </div>
+
+        <h3>LATERAIS</h3>
+
+        <div className="players-grid">
+          {fullbacks.map(player => (
             <PlayerCard
               key={player.id}
               player={player}

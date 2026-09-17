@@ -19,8 +19,7 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-# Garante que o JSON esteja disponível no container
-COPY --from=build /src/Data ./Data
+COPY --from=build /src/data ./data
 
 ENV ASPNETCORE_URLS=http://+:80
 

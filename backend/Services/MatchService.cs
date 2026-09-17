@@ -6,15 +6,15 @@ namespace CorinthiansApi.Services;
 
 public class MatchService
 {
-    private readonly HttpClient _httpClient;
     private readonly IMemoryCache _cache;
+    private readonly IWebHostEnvironment _environment;
 
     public MatchService(
-        HttpClient httpClient,
-        IMemoryCache cache)
+        IMemoryCache cache,
+        IWebHostEnvironment environment)
     {
-        _httpClient = httpClient;
         _cache = cache;
+        _environment = environment;
     }
 
     public async Task<Match?> GetNextMatch()
@@ -30,26 +30,26 @@ public class MatchService
             return cachedMatch;
         }
 
-        Console.WriteLine("NEXT MATCH: API");
+        Console.WriteLine("NEXT MATCH: JSON");
 
-        var url =
-            "https://sportscore.com/api/widget/team/?sport=football&slug=corinthians-sp&limit=30";
+        var path = Path.Combine(
+            _environment.ContentRootPath,
+            "data",
+            "next.json"
+        );
 
-        var response = await _httpClient.GetAsync(url);
-
-        var json = await response.Content.ReadAsStringAsync();
-
-        Console.WriteLine($"STATUS: {(int)response.StatusCode}");
-        Console.WriteLine("===== SPORT SCORE =====");
-        Console.WriteLine(json);
-        Console.WriteLine("======================");
-
-        if (!response.IsSuccessStatusCode)
+        if (!File.Exists(path))
         {
-            throw new Exception(
-                $"SportScore retornou {(int)response.StatusCode}: {json}"
+            throw new FileNotFoundException(
+                $"Arquivo não encontrado: {path}"
             );
         }
+
+        var json = await File.ReadAllTextAsync(path);
+
+        Console.WriteLine("===== NEXT JSON =====");
+        Console.WriteLine(json);
+        Console.WriteLine("=====================");
 
         using var document =
             JsonDocument.Parse(json);
@@ -194,8 +194,7 @@ public class MatchService
 
     private static string FormatTeamLogo(
         string name,
-        string apiLogo
-    )
+        string apiLogo)
     {
         if (name.Contains(
             "corinthians",
@@ -209,8 +208,7 @@ public class MatchService
     }
 
     private static string FormatCompetitionName(
-        string competition
-    )
+        string competition)
     {
         var normalized =
             competition

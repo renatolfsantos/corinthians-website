@@ -24,7 +24,7 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddScoped<FootballService>();
 
-builder.Services.AddHttpClient<MatchService>();
+builder.Services.AddScoped<MatchService>();
 
 var app = builder.Build();
 

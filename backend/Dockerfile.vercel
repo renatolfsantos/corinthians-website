@@ -19,7 +19,7 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-COPY --from=build /src/data ./data
+COPY --from=build /src/Data ./Data
 
 ENV ASPNETCORE_URLS=http://+:80
 

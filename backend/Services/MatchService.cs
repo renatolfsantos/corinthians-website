@@ -38,9 +38,8 @@ public class MatchService
 
         var path = Path.Combine(
             _environment.ContentRootPath,
-            "data",
+            "Data",
             "next.json"
-
         );
 
         if (!File.Exists(path))

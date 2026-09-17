@@ -17,6 +17,8 @@ public class MatchService
         _environment = environment;
     }
 
+
+
     public async Task<Match?> GetNextMatch()
     {
         const string cacheKey = "corinthians-next-match";
@@ -32,10 +34,13 @@ public class MatchService
 
         Console.WriteLine("NEXT MATCH: JSON");
 
+
+
         var path = Path.Combine(
             _environment.ContentRootPath,
             "data",
             "next.json"
+
         );
 
         if (!File.Exists(path))
@@ -155,9 +160,12 @@ public class MatchService
             nextMatch,
             TimeSpan.FromMinutes(10)
         );
+           
 
         return nextMatch;
     }
+
+
 
     private static string FormatTeamName(string name)
     {
